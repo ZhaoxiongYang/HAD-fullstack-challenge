@@ -1,23 +1,8 @@
 var apiData = {};
-/************************************************************
-*                        Instructions                       *
-*                                                           *
-*      Go to https://dev.hackaday.io/applications and       *
-*   create an application with the following information:   *
-*                                                           *
-*   Application Name:       HAD API Demo                    *
-*   Application Url:        http://localhost:3000           *
-*   Callback Url:           http://localhost:3000/callback  *
-*   Description:            API DEMO                        *
-*                                                           *
-************************************************************/
-
-/************************************************************
-*     Fill these out with your credentials (as strings):    *
-************************************************************/
-apiData.clientId = 'vnpO7CvZSk286nc8p29yrGLIFUALH5sqnkOnhJdCfWvqqFPD';
-apiData.clientSecret = 'sRxaGJNW1Gc5eWNndnKcuf5y1vzDBFQo6ebKLgXFIJtn32T6';
-apiData.userKey = '9DIro0QOu7ASlvwz';
+require ('custom-env').env('api')
+apiData.clientId = process.env.CLIENT_ID;
+apiData.clientSecret = process.env.CLIENT_SECRET;
+apiData.userKey = process.env.USER_KEY;
 
 
 // HAD API URLs:
